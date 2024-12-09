@@ -1,3 +1,5 @@
+import os
+import sys
 from tkinter import messagebox
 import json
 from customtkinter import CTkLabel, CTkFrame, CTkButton, CTkEntry, CTkScrollableFrame, CTkComboBox
@@ -11,6 +13,15 @@ class Basket:
         self.current_frame = None
         self.menu = menu
 
+        try:
+            with open("basket_data.json", "r") as file:
+                self.products = json.load(file)
+            with open("total_price.json", "r") as file:
+                self.total_price = json.load(file)
+        except (FileNotFoundError, json.JSONDecodeError):
+            self.products = []
+            self.total_price = 0.0
+
     def create_title(self):
         title_frame = CTkFrame(master=self.main_view, fg_color="transparent")
         # fill width
@@ -20,14 +31,24 @@ class Basket:
                  font=("Arial Black", 25),
                  text_color="#3EAEB1").pack(anchor="nw", side="left")
 
-    def add_to_basket(self, product):
-        self.products.append(product)
+    def add_to_basket(self, product, quantity):
+        for existing_product in self.products:
+            if existing_product["product_id"] == product["product_id"]:
+                existing_product["quantity"] += quantity
+                break
+        else:
+            product["quantity"] = quantity
+            self.products.append(product)
+
         self.calculate_total_price()
         messagebox.showinfo("Success", f"{product['name']} added to basket")
         self.save_data()
 
     def remove_product(self, product):
-        self.products.remove(product)
+        for existing_product in self.products:
+            if existing_product["product_id"] == product["product_id"]:
+                self.products.remove(existing_product)
+                break
         self.calculate_total_price()
         self.save_data()
         self.show_basket()
@@ -224,9 +245,7 @@ class Basket:
         CTkLabel(master=self.current_frame, text=f"Payment Method: {payment_method}").pack(pady=5)
         CTkLabel(master=self.current_frame, text=f"Total: {self.total_price}€").pack(pady=5)
 
-        self.products = []
-        self.total_price = 0.0
-        self.save_data()
+        self.clear_basket()
 
         CTkButton(
             master=self.current_frame,
@@ -241,6 +260,12 @@ class Basket:
             json.dump(self.products, file)
         with open("total_price.json", "w") as file:
             json.dump(self.total_price, file)
+
+    def clear_basket(self):
+        self.products = []
+        self.total_price = 0.0
+        os.remove("basket_data.json")
+        os.remove("total_price.json")
 
 
 

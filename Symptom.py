@@ -1,7 +1,8 @@
 import json
-from tkinter import messagebox
+from tkinter import messagebox, IntVar
 
-from customtkinter import CTkLabel, CTkFrame, CTkComboBox, CTkScrollableFrame, CTkButton, CTkTextbox
+from customtkinter import CTkLabel, CTkFrame, CTkComboBox, CTkScrollableFrame, CTkButton, CTkTextbox, CTkToplevel, \
+    CTkOptionMenu
 
 from Basket import Basket
 
@@ -154,16 +155,60 @@ class Symptom:
             )
             detail_label.pack(fill="x", padx=20, pady=5, anchor="w")
 
-        CTkButton(
-            master=self.products_frame,
+        # by ChatGPT
+
+        action_frame = CTkFrame(master=self.products_frame, fg_color="#FFFFFF", corner_radius=15, border_width=2,
+                                border_color="#3EAEB1")
+        action_frame.pack(fill="x", padx=20, pady=20)
+
+
+        quantity_var = IntVar(value=0)
+        options = [str(i) for i in range(1, product["quantity"] + 1)]
+
+        CTkLabel(action_frame, text="Quantity:", font=("Arial Bold", 12), text_color="#3EAEB1").pack(side="left",
+                                                                                                     padx=10, pady=10)
+
+        quantity_dropdown = CTkOptionMenu(
+            action_frame,
+            values=options,
+            variable=quantity_var,
+            fg_color="#E0F7F7",
+            button_color="#3EAEB1",
+            button_hover_color="#1D837F",
+            text_color="#3EAEB1",
+            width=100
+        )
+        quantity_dropdown.pack(side="left", padx=10, pady=10)
+
+
+        add_to_basket_button = CTkButton(
+            master=action_frame,
             text="Add to Basket",
             font=("Arial Bold", 12),
             fg_color="#3EAEB1",
             hover_color="#1D837F",
-            command=lambda x=product: self.add_to_basket(x)
-        ).pack(pady=(5, 10))
+            corner_radius=10,
+            width=120,
+            height=35,
+            command=lambda: self.add_to_basket(product, quantity_var.get()),
+            state="disabled"
+        )
+        add_to_basket_button.pack(side="right", padx=10, pady=10)
 
-    def add_to_basket(self, product):
-        basket = Basket(self.main_view, self.menu)
-        basket.add_to_basket(product)
-        basket.show_basket()
+        def on_quantity_change(*args):
+            selected_quantity = quantity_var.get()
+            if selected_quantity > 0:
+                add_to_basket_button.configure(state="normal")
+            else:
+                add_to_basket_button.configure(state="disabled")
+
+        quantity_var.trace_add("write", on_quantity_change)
+
+    def add_to_basket(self, product, quantity):
+        if product["quantity"] >= quantity:
+            basket = Basket(self.main_view, self.menu)
+            basket.add_to_basket(product, quantity)
+        else:
+            messagebox.showerror("Error", "Insufficient stock!")
+
+    ###

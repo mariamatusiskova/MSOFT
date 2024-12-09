@@ -1,7 +1,7 @@
 import json
-from tkinter import messagebox
+from tkinter import messagebox, IntVar
 
-from customtkinter import CTkFrame, CTkLabel, CTkButton, CTkEntry, CTkScrollableFrame
+from customtkinter import CTkFrame, CTkLabel, CTkButton, CTkEntry, CTkScrollableFrame, CTkOptionMenu
 
 from Basket import Basket
 
@@ -200,19 +200,3 @@ class Prescription:
                 text=value,
                 font=("Arial", 12)
             ).pack(side="left")
-
-
-        CTkButton(
-            master=details_frame,
-            text="Add to Basket",
-            font=("Arial Bold", 12),
-            fg_color="#3EAEB1",
-            hover_color="#1D837F",
-            command=lambda x=medicine: self.add_to_basket(x)
-        ).pack(pady=(5, 10))
-
-    def add_to_basket(self, product):
-        basket = Basket(self.main_view, self.menu)
-        basket.add_to_basket(product)
-        basket.show_basket()
-
