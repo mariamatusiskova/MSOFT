@@ -1,0 +1,152 @@
+{
+    "categories": {
+        "Vitamins": {
+            "description": "Essential vitamins and supplements",
+            "products": [
+                {
+                    "name": "Vitamin D3 Tablets",
+                    "product_id": "VIT001",
+                    "brand": "HealthPlus",
+                    "category": "Vitamins",
+                    "type": "Medicine",
+                    "price": 9.99,
+                    "quantity": 100,
+                    "description": "High strength Vitamin D3 supplement",
+                    "dosage_recommendation": "One tablet daily with food",
+                    "leaflet": "Store below 25°C. Keep out of reach of children. Side effects: None reported at recommended dosage",
+                    "expiry_date": "2025-12-31"
+                }
+            ]
+        },
+        "OTC": {
+            "description": "Over-the-counter medications",
+            "products": [
+                {
+                    "name": "Pain Relief Tablets",
+                    "product_id": "OTC001",
+                    "brand": "MediRelief",
+                    "category": "OTC",
+                    "type": "Medicine",
+                    "price": 6.99,
+                    "quantity": 50,
+                    "description": "Fast-acting pain relief medication",
+                    "dosage_recommendation": "1-2 tablets every 4-6 hours as needed",
+                    "leaflet": "Do not exceed 8 tablets in 24 hours. Avoid alcohol. Side effects: May cause stomach upset",
+                    "expiry_date": "2025-06-30"
+                }
+            ]
+        },
+        "HygieneCosmetics": {
+            "description": "Personal hygiene and cosmetic products",
+            "products": [
+                {
+                    "name": "Antibacterial Hand Gel",
+                    "product_id": "HYG001",
+                    "brand": "CleanCare",
+                    "category": "HygieneCosmetics",
+                    "type": "Cosmetic",
+                    "price": 3.99,
+                    "quantity": 200,
+                    "description": "Quick-drying antibacterial hand gel",
+                    "dosage_recommendation": "Apply small amount to hands and rub until dry",
+                    "expiry_date": "2025-12-31",
+                    "composition": [
+                        "Benzoyl Peroxide 5%",
+                        "Aloe Vera",
+                        "Glycerin"
+                    ]
+                }
+            ]
+        },
+        "MedicalDevices": {
+            "description": "Medical and healthcare devices",
+            "products": [
+                {
+                    "name": "Digital Thermometer",
+                    "product_id": "DEV001",
+                    "brand": "MediTech",
+                    "category": "MedicalDevices",
+                    "type": "Equipment",
+                    "price": 15.99,
+                    "quantity": 30,
+                    "description": "Quick-read digital thermometer",
+                    "model_num": "MT100",
+                    "warranty_period": "2025-12-31",
+                    "certification": "CE Certified"
+                }
+            ]
+        },
+        "HealthcareTools": {
+            "description": "Healthcare monitoring and assistance tools",
+            "products": [
+                {
+                    "name": "Blood Pressure Monitor",
+                    "product_id": "HLT001",
+                    "brand": "HealthTrack",
+                    "category": "HealthcareTools",
+                    "type": "Equipment",
+                    "price": 49.99,
+                    "quantity": 15,
+                    "description": "Automatic blood pressure and heart rate monitor",
+                    "model_num": "BP200",
+                    "warranty_period": "2026-12-31",
+                    "certification": "FDA Approved"
+                }
+            ]
+        },
+        "BabyAndKids": {
+            "description": "Products for infants and children",
+            "products": [
+                {
+                    "name": "Children's Multivitamin",
+                    "product_id": "BAK001",
+                    "brand": "KidsHealth",
+                    "category": "BabyAndKids",
+                    "type": "Medicine",
+                    "price": 12.99,
+                    "quantity": 60,
+                    "description": "Complete vitamin supplement for children",
+                    "dosage_recommendation": "One gummy daily",
+                    "leaflet": "Keep out of reach of children. Store in a cool place. Side effects: None reported",
+                    "expiry_date": "2025-06-30"
+                }
+            ]
+        },
+        "Treatments": {
+            "description": "Specialized treatment products",
+            "products": [
+                {
+                    "name": "Wound Healing Cream",
+                    "product_id": "TRT001",
+                    "brand": "HealFast",
+                    "category": "Treatments",
+                    "type": "Medicine",
+                    "price": 14.99,
+                    "quantity": 45,
+                    "description": "Advanced wound healing cream",
+                    "dosage_recommendation": "Apply thin layer 2-3 times daily",
+                    "leaflet": "For external use only. Keep wound clean before application. Side effects: Mild stinging sensation possible",
+                    "expiry_date": "2025-09-30"
+                }
+            ]
+        },
+        "VeterinaryMedicine": {
+            "description": "Medicines and supplements for animals",
+            "products": [
+                {
+                    "name": "Pet Multivitamin",
+                    "product_id": "VET001",
+                    "brand": "PetCare",
+                    "category": "VeterinaryMedicine",
+                    "type": "Medicine",
+                    "price": 16.99,
+                    "quantity": 30,
+                    "description": "Complete vitamin supplement for dogs and cats",
+                    "dosage_recommendation": "Based on pet weight - see leaflet",
+                    "leaflet": "Administer with food. Store in a cool, dry place. Side effects: None reported at recommended dosage",
+                    "expiry_date": "2025-12-31"
+                }
+            ]
+        }
+    }
+}

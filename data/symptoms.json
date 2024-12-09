@@ -1,0 +1,248 @@
+{
+    "symptoms": {
+        "Fever": {
+            "description": "Elevated body temperature above normal",
+            "severity_level": 2,
+            "symptom_id": "SYM001",
+            "type": "Fever",
+            "products": [
+                {
+                    "name": "Fever Relief Tablets",
+                    "product_id": "FEV001",
+                    "brand": "MediRelief",
+                    "type": "Medicine",
+                    "price": 7.99,
+                    "quantity": 24,
+                    "description": "Fast-acting fever reduction",
+                    "dosage_recommendation": "1-2 tablets every 6 hours",
+                    "leaflet": "Do not exceed 8 tablets in 24 hours. Side effects: May cause drowsiness",
+                    "expiry_date": "2025-06-30"
+                }
+            ]
+        },
+        "Pain": {
+            "description": "General body pain or discomfort",
+            "severity_level": 2,
+            "symptom_id": "SYM002",
+            "type": "Pain",
+            "products": [
+                {
+                    "name": "Pain Relief Gel",
+                    "product_id": "PAI001",
+                    "brand": "MediRelief",
+                    "type": "Medicine",
+                    "price": 9.99,
+                    "quantity": 100,
+                    "description": "Topical pain relief",
+                    "dosage_recommendation": "Apply 3-4 times daily",
+                    "leaflet": "For external use only. Side effects: Mild skin irritation possible",
+                    "expiry_date": "2025-08-30"
+                }
+            ]
+        },
+        "Cough": {
+            "description": "Persistent coughing and throat irritation",
+            "severity_level": 2,
+            "symptom_id": "SYM003",
+            "type": "Cough",
+            "products": [
+                {
+                    "name": "Cough Syrup",
+                    "product_id": "COU001",
+                    "brand": "MediRelief",
+                    "type": "Medicine",
+                    "price": 8.99,
+                    "quantity": 200,
+                    "description": "Relief from dry and chesty coughs",
+                    "dosage_recommendation": "10ml every 4-6 hours",
+                    "leaflet": "Do not exceed 6 doses in 24 hours. Side effects: May cause drowsiness",
+                    "expiry_date": "2025-07-31"
+                }
+            ]
+        },
+        "Fatigue": {
+            "description": "Persistent tiredness and lack of energy",
+            "severity_level": 1,
+            "symptom_id": "SYM004",
+            "type": "Fatigue",
+            "products": [
+                {
+                    "name": "Energy Boost Supplements",
+                    "product_id": "FAT001",
+                    "brand": "VitalPlus",
+                    "type": "Medicine",
+                    "price": 19.99,
+                    "quantity": 30,
+                    "description": "Daily energy support vitamins",
+                    "dosage_recommendation": "One tablet daily with food",
+                    "leaflet": "Take in the morning. Not suitable for evening use. Side Effects: None reported at recommended dosage",
+                    "expiry_date": "2025-09-30"
+                }
+            ]
+        },
+        "Nausea": {
+            "description": "Feeling of sickness with urge to vomit",
+            "severity_level": 2,
+            "symptom_id": "SYM005",
+            "type": "Nausea",
+            "products": [
+                {
+                    "name": "Anti-Nausea Tablets",
+                    "product_id": "NAU001",
+                    "brand": "MediRelief",
+                    "type": "Medicine",
+                    "price": 6.99,
+                    "quantity": 20,
+                    "description": "Fast relief from nausea and motion sickness",
+                    "dosage_recommendation": "One tablet as needed",
+                    "leaflet": "Take at first sign of nausea. Max 3 tablets per day. Side effects: May cause mild drowsiness",
+                    "expiry_date": "2025-11-30"
+                }
+            ]
+        },
+        "Headache": {
+            "description": "Pain or discomfort in the head region",
+            "severity_level": 2,
+            "symptom_id": "SYM006",
+            "type": "Headache",
+            "products": [
+                {
+                    "name": "Headache Relief Tablets",
+                    "product_id": "HEAD001",
+                    "brand": "MediRelief",
+                    "type": "Medicine",
+                    "price": 5.99,
+                    "quantity": 24,
+                    "description": "Fast-acting headache relief",
+                    "dosage_recommendation": "1-2 tablets every 4-6 hours",
+                    "leaflet": "Do not exceed 8 tablets in 24 hours. Side effects: May cause stomach upset if taken without food",
+                    "expiry_date": "2025-10-31"
+                }
+            ]
+        },
+        "Dizziness": {
+            "description": "Sensation of spinning or lightheadedness",
+            "severity_level": 2,
+            "symptom_id": "SYM007",
+            "type": "Dizziness",
+            "products": [
+                {
+                    "name": "Motion Sickness Relief",
+                    "product_id": "DIZ001",
+                    "brand": "TravelMed",
+                    "type": "Medicine",
+                    "price": 7.99,
+                    "quantity": 12,
+                    "description": "Relief from dizziness and vertigo",
+                    "dosage_recommendation": "One tablet every 8 hours",
+                    "leaflet": "Take 30 minutes before travel if needed. Side effects: May cause drowsiness",
+                    "expiry_date": "2025-12-31"
+                }
+            ]
+        },
+        "Rash": {
+            "description": "Skin irritation or inflammation",
+            "severity_level": 1,
+            "symptom_id": "SYM008",
+            "type": "Rash",
+            "products": [
+                {
+                    "name": "Anti-Itch Cream",
+                    "product_id": "RASH001",
+                    "brand": "SkinCare",
+                    "type": "Medicine",
+                    "price": 11.99,
+                    "quantity": 60,
+                    "description": "Soothing relief for skin rashes",
+                    "dosage_recommendation": "Apply thin layer 2-3 times daily",
+                    "leaflet": "For external use only. Discontinue if irritation occurs. Side effects: Rare cases of skin sensitivity",
+                    "expiry_date": "2025-08-31"
+                }
+            ]
+        },
+        "Vomiting": {
+            "description": "Forceful expulsion of stomach contents",
+            "severity_level": 3,
+            "symptom_id": "SYM009",
+            "type": "Vomiting",
+            "products": [
+                {
+                    "name": "Anti-Emetic Tablets",
+                    "product_id": "VOM001",
+                    "brand": "MediRelief",
+                    "type": "Medicine",
+                    "price": 9.99,
+                    "quantity": 10,
+                    "description": "Fast-acting vomiting relief",
+                    "dosage_recommendation": "One tablet as needed",
+                    "leaflet": "Take at first sign of nausea. Max 3 tablets per day. Side effects: May cause drowsiness",
+                    "expiry_date": "2025-07-31"
+                }
+            ]
+        },
+        "Diarrhea": {
+            "description": "Frequent loose or watery stools",
+            "severity_level": 2,
+            "symptom_id": "SYM010",
+            "type": "Diarrhea",
+            "products": [
+                {
+                    "name": "Anti-Diarrheal Capsules",
+                    "product_id": "DIA001",
+                    "brand": "MediRelief",
+                    "type": "Medicine",
+                    "price": 8.99,
+                    "quantity": 12,
+                    "description": "Fast-acting diarrhea relief",
+                    "dosage_recommendation": "Two capsules initially, then one after each loose stool",
+                    "leaflet": "Do not exceed 6 capsules in 24 hours. Stay hydrated. Side effects: May cause constipation",
+                    "expiry_date": "2025-09-30"
+                },
+                {
+                    "name": "Oral Rehydration Salts",
+                    "product_id": "DIA002",
+                    "brand": "HydroHealth",
+                    "type": "Medicine",
+                    "price": 5.99,
+                    "quantity": 10,
+                    "description": "Electrolyte replacement solution",
+                    "dosage_recommendation": "One sachet in water after each loose stool",
+                    "leaflet": "Dissolve completely in water before use. Side effects: None reported.",
+                    "expiry_date": "2025-12-31"
+                }
+            ]
+        },
+        "Acne": {
+            "description": "Skin condition with pimples and inflammation",
+            "severity_level": 1,
+            "symptom_id": "SYM011",
+            "type": "Rash",
+            "products": [
+                {
+                    "name": "Acne Treatment Gel",
+                    "product_id": "ACN001",
+                    "brand": "ClearSkin",
+                    "type": "Medicine",
+                    "price": 15.99,
+                    "quantity": 30,
+                    "description": "Topical acne treatment with benzoyl peroxide",
+                    "dosage_recommendation": "Apply thin layer twice daily",
+                    "leaflet": "Avoid contact with eyes. Use sunscreen during day. Side effects: Dryness, mild peeling",
+                    "expiry_date": "2025-10-31"
+                },
+                {
+                    "name": "Acne Control Cleanser",
+                    "product_id": "ACN002",
+                    "brand": "ClearSkin",
+                    "type": "Cosmetic",
+                    "price": 12.99,
+                    "quantity": 200,
+                    "description": "Gentle daily cleanser for acne-prone skin",
+                    "dosage_recommendation": "Use twice daily",
+                    "expiry_date": "2025-12-31",
+                    "composition": ["Salicylic Acid 2%", "Tea Tree Oil", "Chamomile"]
+                }
+            ]
+        }
+    }
+}
