@@ -3,12 +3,15 @@ from tkinter import messagebox
 
 from customtkinter import CTkFrame, CTkLabel, CTkButton, CTkEntry, CTkScrollableFrame
 
+from Basket import Basket
+
 
 class Prescription:
-    def __init__(self, main_view):
+    def __init__(self, main_view, menu):
         self.main_view = main_view
         self.prescription_data = self.load_prescriptions_data()
         self.current_table = None
+        self.menu = menu
 
     def load_prescriptions_data(self):
         try:
@@ -197,4 +200,19 @@ class Prescription:
                 text=value,
                 font=("Arial", 12)
             ).pack(side="left")
+
+
+        CTkButton(
+            master=details_frame,
+            text="Add to Basket",
+            font=("Arial Bold", 12),
+            fg_color="#3EAEB1",
+            hover_color="#1D837F",
+            command=lambda x=medicine: self.add_to_basket(x)
+        ).pack(pady=(5, 10))
+
+    def add_to_basket(self, product):
+        basket = Basket(self.main_view, self.menu)
+        basket.add_to_basket(product)
+        basket.show_basket()
 

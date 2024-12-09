@@ -38,7 +38,7 @@ class Menu:
         self.main_view.pack_propagate(0)
         self.main_view.pack(side="left")
 
-        prescription = Prescription(self.main_view)
+        prescription = Prescription(self.main_view, self)
         prescription.create_title()
         prescription.get_insurance_id()
 
@@ -190,20 +190,21 @@ class Menu:
         self.menu_items()
 
         if page_name == "prescriptions":
-            prescription = Prescription(self.current_frame)
+            prescription = Prescription(self.current_frame, self)
             prescription.create_title()
             prescription.get_insurance_id()
         elif page_name == "symptoms":
-            symptom = Symptom(self.current_frame)
+            symptom = Symptom(self.current_frame, self)
             symptom.create_title()
             symptom.symptom_search()
         elif page_name == "categories":
-            category = Category(self.current_frame)
+            category = Category(self.current_frame, self)
             category.create_title()
             category.category_search()
         elif page_name == "basket":
-            basket = Basket(self.current_frame)
+            basket = Basket(self.current_frame, self)
             basket.create_title()
+            basket.show_basket()
         elif page_name == "orders":
             order = Order(self.current_frame)
             order.create_title()

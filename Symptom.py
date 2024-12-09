@@ -3,12 +3,15 @@ from tkinter import messagebox
 
 from customtkinter import CTkLabel, CTkFrame, CTkComboBox, CTkScrollableFrame, CTkButton, CTkTextbox
 
+from Basket import Basket
+
 
 class Symptom:
-    def __init__(self, main_view):
+    def __init__(self, main_view, menu):
         self.main_view = main_view
         self.current_frame = None
         self.symptom_data = self.load_symptoms_data()
+        self.menu = menu
 
     def load_symptoms_data(self):
         try:
@@ -161,4 +164,6 @@ class Symptom:
         ).pack(pady=(5, 10))
 
     def add_to_basket(self, product):
-        print(f"Added {product['name']} to Basket")
+        basket = Basket(self.main_view, self.menu)
+        basket.add_to_basket(product)
+        basket.show_basket()
