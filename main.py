@@ -79,7 +79,41 @@ class PharmacyManagementSystem:
         self.prescription_tree.heading("Medicine", text="Medicine")
         self.prescription_tree.heading("Dosage", text="Dosage")
         self.prescription_tree.heading("Issue Date", text="Issue Date")
-        self.prescription_tree.heading("Expiry Date", text="Expiry Date")
+        self.if insurance_id in prescriptions:
+            # Create a single container for the table
+            table_frame = CTkFrame(master=self.main_view, fg_color="#fff")
+            table_frame.pack(expand=True, fill="both", padx=27, pady=21)
+
+            # Create header row with specific styling
+            header_frame = CTkFrame(master=table_frame, fg_color="#3EAEB1")
+            header_frame.pack(fill="x")
+
+            headers = ["Medicine", "Dosage", "Issue Date", "Expiry Date", "Status"]
+            for header in headers:
+                CTkLabel(
+                    master=header_frame,
+                    text=header,
+                    text_color="#fff",
+                    font=("Arial Bold", 12)
+                ).pack(side="left", expand=True, padx=10, pady=5)
+
+            # Create scrollable frame for data rows
+            data_frame = CTkScrollableFrame(master=table_frame, fg_color="#fff")
+            data_frame.pack(expand=True, fill="both")
+
+            # Add data rows
+            for row in prescriptions[insurance_id]:
+                row_frame = CTkFrame(master=data_frame, fg_color="#f0f0f0")
+                row_frame.pack(fill="x", pady=1)
+
+                for item in row:
+                    CTkLabel(
+                        master=row_frame,
+                        text=item,
+                        font=("Arial", 12)
+                    ).pack(side="left", expand=True, padx=10, pady=5)
+
+            self.current_table = table_frameprescription_tree.heading("Expiry Date", text="Expiry Date")
         self.prescription_tree.heading("Status", text="Status")
         self.prescription_tree["show"] = "headings"
         self.prescription_tree.pack(pady=10, fill='both', expand=True)

@@ -1,0 +1,40 @@
+{
+    "12345": [
+        {
+            "prescription_id": "P001",
+            "doctor_name": "Dr. Smith",
+            "issue_date": "2024-01-01",
+            "status": "Active",
+            "medicines": [
+                {
+                    "name": "Amoxicillin",
+                    "dosage_recommendation": "3 times daily",
+                    "leaflet": "Duration: 7 days, Notes: take with food, Side Effects: May cause nausea, diarrhea",
+                    "expiry_date": "2024-02-01"
+                },
+                {
+                    "name": "Ibuprofen",
+                    "dosage_recommendation": "5 days",
+                    "leaflet": "Duration: As needed, Notes: Take for pain, Side Effects: May cause stomach upset",
+                    "expiry_date": "2024-02-15"
+                }
+            ]
+        }
+    ],
+    "67890": [
+        {
+            "prescription_id": "P002",
+            "doctor_name": "Dr. Johnson",
+            "issue_date": "2024-01-15",
+            "status": "Active",
+            "medicines": [
+                {
+                    "name": "Omeprazole",
+                    "dosage_recommendation": "Once daily",
+                    "leaflet": "Duration: 14 days, Notes: Take before breakfast, Side effects: Headache, stomach pain",
+                    "expiry_date": "2024-02-10"
+                }
+            ]
+        }
+    ]
+}
