@@ -4,7 +4,7 @@ from tkinter import messagebox
 import json
 from customtkinter import CTkLabel, CTkFrame, CTkButton, CTkEntry, CTkScrollableFrame, CTkComboBox
 
-
+############### UC 3: Buy the desired products
 class Basket:
     def __init__(self, main_view, menu):
         self.main_view = main_view
@@ -266,7 +266,7 @@ class Basket:
         self.total_price = 0.0
         os.remove("basket_data.json")
         os.remove("total_price.json")
-
+#############################################
 
 
 

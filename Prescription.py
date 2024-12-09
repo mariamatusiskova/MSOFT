@@ -1,10 +1,9 @@
 import json
 from tkinter import messagebox, IntVar
 
-from customtkinter import CTkFrame, CTkLabel, CTkButton, CTkEntry, CTkScrollableFrame, CTkOptionMenu
+from customtkinter import CTkFrame, CTkLabel, CTkButton, CTkEntry, CTkScrollableFrame
 
-from Basket import Basket
-
+## Use Case 1: View prescription from doctor #
 
 class Prescription:
     def __init__(self, main_view, menu):
@@ -200,3 +199,6 @@ class Prescription:
                 text=value,
                 font=("Arial", 12)
             ).pack(side="left")
+
+
+######

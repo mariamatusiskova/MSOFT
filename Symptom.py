@@ -6,7 +6,7 @@ from customtkinter import CTkLabel, CTkFrame, CTkComboBox, CTkScrollableFrame, C
 
 from Basket import Basket
 
-
+############ UC 2: Find the desired medicine for symptoms
 class Symptom:
     def __init__(self, main_view, menu):
         self.main_view = main_view
@@ -212,3 +212,5 @@ class Symptom:
             messagebox.showerror("Error", "Insufficient stock!")
 
     ###
+
+    ################

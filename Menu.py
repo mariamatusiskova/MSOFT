@@ -189,10 +189,13 @@ class Menu:
         # update menu
         self.menu_items()
 
+        ########################## Use Case 1: View prescription from doctor #
         if page_name == "prescriptions":
             prescription = Prescription(self.current_frame, self)
             prescription.create_title()
             prescription.get_insurance_id()
+        ############################
+        ########################## UC 2: Find the desired medicine for symptoms
         elif page_name == "symptoms":
             symptom = Symptom(self.current_frame, self)
             symptom.create_title()
@@ -201,10 +204,13 @@ class Menu:
             category = Category(self.current_frame, self)
             category.create_title()
             category.category_search()
+        #####################
+        ################ UC 3: Buy the desired products
         elif page_name == "basket":
             basket = Basket(self.current_frame, self)
             basket.create_title()
             basket.show_basket()
+        ##################
         elif page_name == "orders":
             order = Order(self.current_frame)
             order.create_title()
